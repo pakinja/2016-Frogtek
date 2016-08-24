@@ -1,0 +1,184 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2312}
+%TCIDATA{Created=Wednesday, February 24, 2016 08:27:02}
+%TCIDATA{LastRevised=Wednesday, February 24, 2016 11:36:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\begin{center}
+Prueba Frogtek
+
+S\'{\i}ntesis de Resultados
+
+M. en C. Francisco Jaramillo A.
+
+\bigskip
+\end{center}
+
+$1.-$ \textquestiondown Existe alguna relaci\'{o}n con el comportamiento en
+los primeros $7$ d\'{\i}as con la validez de la informaci\'{o}n de la tienda?
+
+\bigskip
+
+Se clusteriz\'{o} la base de datos mixpanel\_events en dos keys:
+
+$1:$ Tiendas v\'{a}lidas
+
+$0:$ Tiendas no v\'{a}lidas
+
+La variable categ\'{o}rica event, se transforma a num\'{e}rica y se obtienen
+los histogramas de frecuencia relativa y la densidad para ambos clusters.
+
+\FRAME{dtbpF}{10.1994cm}{6.3474cm}{0pt}{}{}{rplotv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 10.1994cm;height 6.3474cm;depth
+0pt;original-width 14.5779in;original-height 9.0668in;cropleft "0";croptop
+"1.0003";cropright "1.0038";cropbottom "0";filename
+'../../../Pictures/Rplotv.jpg';file-properties "XNPEU";}}
+
+\bigskip
+
+\FRAME{dtbpF}{10.2111cm}{6.3755cm}{0pt}{}{}{rplotnv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 10.2111cm;height 6.3755cm;depth
+0pt;original-width 14.5779in;original-height 9.0668in;cropleft "0";croptop
+"1.0004";cropright "1.0007";cropbottom "0";filename
+'../../../Pictures/Rplotnv.jpg';file-properties "XNPEU";}}
+
+En los histogramas se observa la similitud en el comportamiento de los
+eventos de las tiendas en los primero 7 d\'{\i}as.
+
+Las densidades muestran claramente el mismo comportamiento en los eventos
+para ambos tipos de tiendas.
+
+\FRAME{dtbpF}{4.6981in}{2.9334in}{0pt}{}{}{dens.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 4.6981in;height 2.9334in;depth
+0pt;original-width 15.3067in;original-height 9.5201in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/dens.jpg';file-properties "XNPEU";}}
+
+\textbf{No existe diferencia en la distribuci\'{o}n de eventos para tiendas v%
+\'{a}lidas y no v\'{a}lidas.}
+
+\newpage
+
+$2.-$ \textquestiondown Existe alg\'{u}n patr\'{o}n de comportamiento en la
+acci\'{o}n (o falta de ella) en la validez de las tiendas? \textquestiondown %
+Existen combinaciones de eventos que determinen un camino al \'{e}xito de la
+tienda?
+
+\bigskip
+
+Se calcularon las medias categ\'{o}ricas para la variable \textit{event} por
+tipo de tienda (v\'{a}lida - no v\'{a}lida) y realizando gr\'{a}ficas
+quantile-quintile normal observamos lo siguiente:
+
+\FRAME{dtbpF}{4.1908in}{2.9925in}{0pt}{}{}{qqnormv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 4.1908in;height 2.9925in;depth
+0pt;original-width 14.8443in;original-height 10.5779in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/qqnormv.jpg';file-properties "XNPEU";}}
+
+\FRAME{dtbpF}{4.1742in}{2.9777in}{0pt}{}{}{qqnormnv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 4.1742in;height 2.9777in;depth
+0pt;original-width 14.8443in;original-height 10.5779in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/qqnormnv.jpg';file-properties "XNPEU";}}
+
+\bigskip
+
+Se analizaron las medias categ\'{o}ricas para la variable \textit{event}
+ordenadas en funci\'{o}n del tiempo \textit{timestamp} de forma ascendente y
+en la serie de tiempo se observa:
+
+\FRAME{dtbpF}{3.9297in}{2.8052in}{0pt}{}{}{forv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 3.9297in;height 2.8052in;depth
+0pt;original-width 14.8443in;original-height 10.5779in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/forv.jpg';file-properties "XNPEU";}}
+
+\FRAME{dtbpF}{3.9408in}{2.8135in}{0pt}{}{}{fornv.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 3.9408in;height 2.8135in;depth
+0pt;original-width 14.8443in;original-height 10.5779in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/fornv.jpg';file-properties "XNPEU";}}
+
+\newpage 
+
+En las gr\'{a}ficas qqnorm se observa un comportamiento normal en cierto
+intervalo de la media categ\'{o}rica para eventos tanto para tiendas v\'{a}%
+lidas como no v\'{a}lidas, que al unir con lo observado en las series de
+tiempo, podemos concluir que:
+
+\textbf{existe un patr\'{o}n de comportamiento, que gira en torno a
+combinaciones de eventos que tienen una media categ\'{o}rica alrededor de }$%
+80$\textbf{, tanto para tiendas v\'{a}lidas como para no v\'{a}lidas.}
+
+\bigskip
+
+$3.-$ \textquestiondown Qu\'{e} tipos de perfiles de usuario podemos
+observar?
+
+\bigskip
+
+Si la pregunta se refiere a las "tiendas" observamos cuatro perfiles:
+
+$\bigskip $
+
+$a)$ (small $=1$, valid$=1$, media evento)
+
+$b)$(small$=1$, no valid$=0$, media evento)
+
+$c)$ (large$=2$, valid$=1$, media evento)
+
+$d)$ (large$=2$, no valid$=0$, media de evento)
+
+\bigskip
+
+\textbf{El perfil principal es: tienda peque\~{n}a, v\'{a}lida y con alta
+densidad de medias categ\'{o}ricas de eventos.}
+
+\FRAME{dtbpF}{3.664in}{2.8237in}{0pt}{}{}{perfiles.jpg}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 3.664in;height 2.8237in;depth
+0pt;original-width 13.7484in;original-height 10.5779in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'../../../Pictures/perfiles.jpg';file-properties "XNPEU";}}
+
+\end{document}
